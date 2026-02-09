@@ -1,5 +1,6 @@
 ## Overview
-The thesis follows a structured methodology to collect, analyse and forensically store social media content through APIs. The methododlogy will accquire online discorese on relevant topics based on key events or a sub-reddit. The acquisition invovlves quering for either and then based on the satisfaction of parameters which are unique to each use case, following the already established forensic collection of information and storing it until its verified. 442497
+The thesis follows a structured methodology to collect, analyse and forensically store social media content through APIs. The methododlogy will accquire online discorese on relevant topics based on key events or a sub-reddit. The acquisition invovlves quering for either and then based on the satisfaction of parameters which are unique to each use case, following the already established forensic collection of information and storing it until its verified.
+
 
 This approach to data quering, filtering, analysis and collection is meant to form a framework which can be repeated and modified accordingly for each use case. A key concept to remembere is how the filters are unique to a particular use case. The contexts are depended entierly on what the use case is and while they may not be qunique for each each use case needs its own relevent context.
 
