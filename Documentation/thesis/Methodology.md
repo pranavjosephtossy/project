@@ -47,29 +47,34 @@ Timeframe
     There can never be a guarentee that all the filtered content are infact harmful in nature. Some content may feature indicators of the particular case but may still not fit it.This could be a result of overlapping keywords, different contexts or even satire. This is why its important to not treat the data as digital evidence yet, even though they may have fit the initial parameter for it. This ensures that the data set is contextually relevent.
 
 ## Categorization
-Categorization involves placing filtered content into groups based on context and intent. This is not to assign legal severity rather to organise data in a structured manner for review.
+Categorization involves placing filtered content into groups based on context and intent. This is not to determine legal guilt or innocence rather to organise data in a structured manner for review. By grouping related content it becomes esier for a us to distinguish between content pertinent for further analysis. Think of it as sorting out the content on three bases. The black and white ones, obviously distinguishible as relevant or not relevant. And the third one as greys. These would warrent further examination requiering a human-in-the-loop review. 
 
-This helps differentiate content into groups based on if they are missinformation, abusive content or threats. This also might involve determining if its relevent or not. These categorizations are based on each use cases specific context. 
+Further this can be fledged out by using it to differentiate content into groups based on if they are missinformation, abusive content, harassment or threats. Using the context of the content is key as it may be what diffrentiates an actual threath from a sarcastic comment or joke. 
 
-In adition to what the content is, catagorizing also determines how concerning/bad the content is. Depending on the context it might be important to document how severe it is, maybe even promting an immediate enquiery. This can help later in a formal investigation as it prioratized which ones should be looked at first. 
-- What is it
-- How bas is it
+In adition to what the content is, catagorizing also determines the severity or concern associated with a post or comment, maybe even promting an immediate enquiery. This can help later in a formal investigation as it prioratized which ones should be looked at first. While the methodology assigns no legal judgement, a foundational level severity catagorization may assist in prioritizing reviews.  
+
+The structured catagorization improves the efficiency of later stages of analysis by reducing human requiered review of non pertinent content. Thereby leaving higher priority reviews for reviews.
 
 ## Preservation and Integrity
-Preserving data collected is a fundamental aspect in forensic methodology. Following Filtering andCatagorization it is important to store the relevent data from the dataset in a forensically secure manner to enure integrity and reproducibility. This is so much later down the line, if the data were to be needed in a formal enquiery, be it initiated by a private sector company or a court, the evidence is admissable.
+Preserving data collected is a fundamental aspect of digital forensic methodology. Following Filtering and Catagorization it is important to store the relevent data from the dataset in a forensically secure manner to enure integrity and reproducibility. This is to ensure that the collected data remains unaltered and reproducible if it is later required for formal investigations or as evidence in court.
 
-Hashing is applied to each data item during storage. These values are way of ensuring integrity as each hash value is uique to the data. Every minute change alters the value as it is unique to each dataset. 
+Proper preservation allows investigators to demonstrate that stored data has not been altered, so they can stand behind it. The system should therefore not recorde just the data itself, but also the associated metadata such as timestamps, user info and hashes of the content itself.
 
+Hashing is applied to each content following collection. This is done so to reduce the widow of potential alteration. Once the hases are recordeed, the content is catagorized. Following which if it complied with the requierments the whole case, ie the content, and its meta data are also hashed . 
 
-- Hashing
-- Chain of Custody
+By generating and recording the hashes it becomes possible to later verify that the stored data wasn't altered
+
+The concept of chain of custody referes to documenting how digital evidence is handled throughout its life cycle. Although the system does not constitue a full investigative chain of custody, by logginf the time of collection, the source of data and the actions performed it follows a similar policy. 
 
 ## Evidence catagorization
 - data vs evidence
+This methodology distinguished between data and digital evidence. Not all content collected qualifies as evidence, rather as raw data that may contain information or behaviour relevent to each specific use case. Only afteer the data is categorized and a human-review can it be potentially be considered as digital evidence. Even then we are not assigning legal distiction of evidence or not, only treating it as such in case it does becomee.
 
-## Ethical and Legal
-- Privacy
-- Censorship and Surveillance
+By maintaing a clear seperation between data and digital evidence the methodolofy avoids prematurely assigning legal significane to non-pertinent content. This ensures the system does not work as an automated investigtive authority.
 
 ## Limitations
-- Shortfalls
+One major limitation of the proposed methodology is the reliance on keyword-based filtering to collect data. While practicle nor narrowing large datasets it cannot capture all the complexity of online discouse as langualge on social media platforns often involve sarcasme, code or ever evolving slang. 
+
+As a result the process is likely to generate a lot of false positives and false negatives. Like with most cases while false positves can be rectified by review false negatives are a much major short comming. There may be pertinent or even really very sevier cases that may be ignored simply because we "fished in the worng spot". This can happen by either missing necessasry keywords or searchin in the wrong place.
+
+Another limitation is the focus on a single platform for data collection. This limits the general aplicability of the framework across othr social media environment. The system is dependent on the capabilities of the platforms API. Restrictions like rate limits and missing hostorical content affects the completeness of the dataset.
