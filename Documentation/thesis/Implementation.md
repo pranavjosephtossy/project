@@ -12,13 +12,15 @@ Since reddit provides its own proprietory API we can use that as the first modul
 
 # Final Implementation
 Through out this process we had been thinking about how we could implement automation or AI into this pipeline so as to make it more relevant to modern day standards. Following a meeting with our supervisor we came up with an alternative pipeline which follows true modularity while implementing AI. The revised pipeline would look like this:
+
 `
-Reddit API->
-Filtering and Collection Module->
-AI/LLM Analysis Module->
-Catagorization Module->
-Strorage Module
+    Reddit API->
+    Filtering and Collection Module->
+    AI/LLM Analysis Module->
+    Catagorization Module->
+    Strorage Module
 `
+
 
 We query the data from the API using filters. Reddit offers extensive querying filters which can be manipulated accourdingly to fit the use case. Once queried we can pass the data into a LLM which then decideds how to catagorize it. It also assigns a priority level thereby pushing the more egregious use case matches forward. Once it has determined if the data fullfills the use case it passes it to the storage module. This in turn is a propretry program that forensically stores the data.
 
