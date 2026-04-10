@@ -1,6 +1,5 @@
 import json
 import hashlib
-import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -10,20 +9,24 @@ def sha256(value: str)-> str:
 def utc_now():
     return datetime.now(timezone.utc).isoformat()
 
-def evidence_storage(json_item: dict, analysis_output: dict, storage_root="evidence_store"):
+def evidence_storage(raw_json: dict, analysis_output: dict, storage_root="evidence_store"):
 
-    content= json_item["content"]
-    username= json_item["username"]
+    raw_content= raw_json["content"]
+    raw_username= raw_json["username"]
+    analysis_content= analysis_output["content"]
+    analysis_username= analysis_output["username"]
 
-    initial_hash= json_item["initial_hash"]
-    current_hash= sha256(content)
-
-    if current_hash != initial_hash:
-        print("Hash mismatch, evidence altered!!!")
+    if raw_json_hash != sha256(json.dumps(raw_json,sort_keys=True)):
+        print("Hash mismatch!!!")
         return
     
-    content_hash= sha256(content)
-    username_hash= sha256(username)
+    if sha256(raw_content)!= sha256(analysis_content):
+        print("Hash mismatch, Content does not match!!! Possible LLM hallucination")
+    elif sha256(raw_username)!= sha256(analysis_username):
+        print("Hash mismatch, Username does not match!!! Possible alteration")
+    
+    content_hash= sha256(raw_content)
+    username_hash= sha256(raw_username)
 
     storage_chain_entry = {
         "timestamp": utc_now,
@@ -31,13 +34,32 @@ def evidence_storage(json_item: dict, analysis_output: dict, storage_root="evide
         "performed_by":"forensic_storage_module"
     }
 
-    forensic_package ={
-        "evidence_id": str(uuid.uuid4()),
-        "raw_content": json_item,
+    forensic_package = {
+        "raw_content": raw_json,
+        "analysis_output": analysis_content,
         "hashes":{
-            "initial_hash": initial_hash,
-            "content_hash": content_hash,
-            "username_hash": username_hash
-            }
+            "initial_raw_json_hash": raw_json_hash,
+            "content_hash": sha256(analysis_content),
+            "username_hash": sha256(analysis_username)
+            },
+        "chain_of_custody": "ef3e"
         }
+    
+
+example_json ={
+    "content": "This is an   example",
+    "username": "example_adbd",
+    "subreddit": "cybersecurity",
+    "timestamp": "2026-04-5"
+}
+analysis_json ={
+    "content": "This is an example",
+    "username": "example_adbd",
+    "subreddit": "cybersecurity",
+    "timestamp": "2026-04-7"
+}
+
+raw_json_hash = sha256(json.dumps(example_json, sort_keys=True))
+
+evidence_storage(example_json,analysis_json)
     
