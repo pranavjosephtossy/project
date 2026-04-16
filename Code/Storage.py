@@ -47,7 +47,7 @@ def evidence_storage(raw_json: dict, analysis_output: dict, storage_root="eviden
     
 
 example_json ={
-    "content": "This is an   example",
+    "content": "This is an example",
     "username": "example_adbd",
     "subreddit": "cybersecurity",
     "timestamp": "2026-04-5"
