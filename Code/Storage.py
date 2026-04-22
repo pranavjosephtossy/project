@@ -16,10 +16,12 @@ def evidence_storage(raw_json: dict, analysis_output: dict, storage_root="eviden
     analysis_content= analysis_output["content"]
     analysis_username= analysis_output["username"]
 
+    print("Intrgrity of raw json:")
     if raw_json_hash != sha256(json.dumps(raw_json,sort_keys=True)):
         print("Hash mismatch!!!")
-        return
-    
+    else:
+        print("Hash Matched!")
+    print("Integrity between analysis module and collection/raw module json:")
     if sha256(raw_content)!= sha256(analysis_content):
         print("Hash mismatch, Content does not match!!! Possible LLM hallucination")
     elif sha256(raw_username)!= sha256(analysis_username):
@@ -29,7 +31,7 @@ def evidence_storage(raw_json: dict, analysis_output: dict, storage_root="eviden
     username_hash= sha256(raw_username)
 
     storage_chain_entry = {
-        "timestamp": utc_now,
+        "timestamp": utc_now(),
         "action": "stored",
         "performed_by":"forensic_storage_module"
     }
@@ -54,7 +56,7 @@ example_json ={
 }
 analysis_json ={
     "content": "This is an example",
-    "username": "example_adbd",
+    "username": "example_adbdws",
     "subreddit": "cybersecurity",
     "timestamp": "2026-04-7"
 }
