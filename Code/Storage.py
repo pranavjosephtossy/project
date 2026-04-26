@@ -1,6 +1,7 @@
 import json
 import hashlib
 from datetime import datetime, timezone
+from chain_of_custody import add_chain_of_custody_entry
 from pathlib import Path
 
 def sha256(value: str)-> str:
@@ -9,7 +10,7 @@ def sha256(value: str)-> str:
 def utc_now():
     return datetime.now(timezone.utc).isoformat()
 
-def evidence_storage(raw_json: dict, analysis_output: dict, storage_root="evidence_store"):
+def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
 
     raw_content= raw_json["content"]
     raw_username= raw_json["username"]
@@ -30,12 +31,8 @@ def evidence_storage(raw_json: dict, analysis_output: dict, storage_root="eviden
     content_hash= sha256(raw_content)
     username_hash= sha256(raw_username)
 
-    storage_chain_entry = {
-        "timestamp": utc_now(),
-        "action": "stored",
-        "performed_by":"forensic_storage_module"
-    }
-
+    storage_log = add_chain_of_custody_entry("stored","forensic_storage_module")
+    final_chain= collection_log+analysis_log_+storage_log
     forensic_package = {
         "raw_content": raw_json,
         "analysis_output": analysis_content,
@@ -44,24 +41,14 @@ def evidence_storage(raw_json: dict, analysis_output: dict, storage_root="eviden
             "content_hash": sha256(analysis_content),
             "username_hash": sha256(analysis_username)
             },
-        "chain_of_custody": "ef3e"
+        "chain_of_custody": final_chain
         }
-    
+    return 
 
-example_json ={
-    "content": "This is an example",
-    "username": "example_adbd",
-    "subreddit": "cybersecurity",
-    "timestamp": "2026-04-5"
-}
-analysis_json ={
-    "content": "This is an example",
-    "username": "example_adbdws",
-    "subreddit": "cybersecurity",
-    "timestamp": "2026-04-7"
-}
+
 
 raw_json_hash = sha256(json.dumps(example_json, sort_keys=True))
 
-evidence_storage(example_json,analysis_json)
+#evidence_storage(example_json,analysis_json)
     
+
