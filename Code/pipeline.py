@@ -8,10 +8,7 @@ json_dump = [
     "timestamp": "2026-04-5"
     },
     {
-    "content": "This is also an example",
-    "username": "example_ishbxs",
-    "subreddit": "cybersecurity",
-    "timestamp": "2026-04-11"
+    "content": "This is also an example"
     }
 ]
 def run_main():
