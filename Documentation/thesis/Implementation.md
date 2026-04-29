@@ -28,7 +28,31 @@ This implementation is proof of true modularity. While ideally, with appropriate
 
 Ulitimately the methodology remains the same. Further the methodology remains the same irresepective of the use case which makes it very versitile. The same methodology can be used on other social media apis or multiple ones and by alteribg the filering and analysis module we can customize the use case range. Further for added complexity and dynamicism we can add on to the catagorization module to offere a tier structured priority and severity labels to conents. This is made possible by the LLM's ability to understand context.
 
-# JSON
+# JSON STRUCTURE AND DATA EXTRACTION
+
+When querying YouTube’s API for videos, the results came back in a structured hierarchical format rather than a simple list. The outer layer is the search lists response for , which is a container for all of the results. Inside this is an items array where each element represents a single video and contains the core metadata ,(the video ID, the channel name, the publication stamp, the title and the description. When the comments are collected ina follow-up query, a separate commentThreads is returned for each video, where each item holds a topLevelComment object containing the comment, the author and the time that it was posted. One example of this can be seen down below
+ 
+In theory a full API response for a single video would contain a large number of additional information depending on what was requested, covering everything from engagement statistics to content rating and reginal restrictions. However storing all of this would be unnecessary and it would just add noise into the dataset without increasing any real forensic value. Because of this reason only the fields that we considered to be forensically and analytically relevant were extracted and carried forward.
+# FIELDS SELECTED FOR EXTRACTION
+
+video_id: the unique identifier for each video assigned to by YouTube. This id prevent the same video from being queried multiple times. It is also the parameter used when querying comments for a specific video
+
+channel_title: The name of the channel, this identifies the source of the content and it can be used for spotting patterns of behaviour linked to a specific creator or organisation over time.
+
+Published_at: The exact timestamp of when the video was published. This si one of the most important fields as it allows data to be placed within a precise timeline and it can be used by the LLM to compare with real-world events.
+
+title and description: the textual content that is associated with the video. The title acts as a headline and the description is the body of the record . Together they create the primary input to the LLM analysis module at the video level.
+
+Video_url: a direct link to the video on Youtube. This is kept so that a reviewer can verify the content in its original context at a later stage. Which is crucial for maintaining integrity and availability.
+
+Comment_author: Display name of the account that posted the comment. Retained for scenarios where the data is to be ever used in a formal investigation.
+
+Comment_text: full text of the comment. The primary field that is analysed by the LLM at the comment level.
+
+Comment_published_at: the timestamp  of when the comment was posted. Useful for making sure whether the comment was made in repose toa  specific event and for building an idea of how discussion developed over time
+
+Everything ekse returned by the API is discarded at this stage. Keeping only the fields above ensures the dataset stays lean and straightforward for the LLM to process
+
 # API
 ## Reddit's API
 # LLM
