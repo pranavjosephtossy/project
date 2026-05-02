@@ -53,7 +53,19 @@ Comment_published_at: the timestamp  of when the comment was posted. Useful for 
 
 Everything ekse returned by the API is discarded at this stage. Keeping only the fields above ensures the dataset stays lean and straightforward for the LLM to process
 
-# API
-## Reddit's API
-# LLM
+# YouTube Data API
+In order to access YouTube’s Data API, which is googles way of giving developers access to public YouTube content, we had to register a project on Google Cloud Console and generate an API key, which the is attached to every request. One thing we had to be aware of was the quota system. Each project gets 10,000 units per day on the free tier and not every request cost the same amount. A search query itself costs 100 units each time, meanwhile extracting comments only cost 1 unit. This gap can fill up very quickly as 10 searches can end up costing 1000 units. So, to run at a scale, we had to be precise and smart on how many queries can be run each session.
+
+We used two endpoints. The first is youtube/v3/search, which queries the videos based on a search item. We then passed in the search query using the q parameter, set type=video to only return videos, and used maxResults to cap how many results came back to us. The second is youtube/v3/commentThreads, which takes a video ID from the search results and gives back the top-level comments (note. Replies within threads are not included, which is something we noted as a limitation of the current implementation.
+
+# LLM ANALYSIS
+After collecting the data, each record gets passed onto a large language model for analysis. The idea is that the model looks at the content and gives us the severity of the content and a short explanation as to why it was assigned that rating.
+
+We decided to use OpenAI’s GPT-4o-mini model for this, since it is cheaper and faster than most of the larger models. For each record we decided we build a prompt from the extracted fields, and we asked the model to analyse the content against the use case that we are evaluating. The use case is a variable that can be found on the top of the script, so switching it from hate speech around a sports event to something like sexism in the workplace only requires changing that one line and nothing else in the code.
+
+The model is instructed to return a JSON object with two fields. Severity gets rated as high, medium, low or none. The reasoning then gives a couple of sentences to explain the decision it made. The reasoning field is considered one of the more important fields as it allows a human reviewer to look at why the model flagged something rather than having to blindly trust the LLM at face value. This process was considered essential to prevent hallucinations. If the model has misread the text or the context, the reviewer can see that immediately find a remediation.
+In order to get consistent results, we set the temperature of the LLM to 0.3, in this way since it is not a high temperature the LLM does not produce random information but stays true to its goal of accuracy. (note in further work we wanted to increase the temperature with increased training data in order to allow the LLM to think in different contexts)
+
+Once the model responds, the severity and the reasoning fields gets added onto the record and the whole output gets written onto one single output JSON file. Everything goes into that file regardless of its severity and nothing gets discarded at this stage. We decided to do this as leaving an LLM to throw away data before a human review it would be the wrong call especially since we do not have full insight into the model’s internal decision-making process. This would also be essential in a forensic context where it might be essential to go back and reassess the full dataset later. Keeping the full dataset with the models reasoning attached would mean that the reviewer has the full picture and makes the final judgement themselves.
+
 # Hashinf/storage implemnttion
