@@ -28,8 +28,44 @@ This implementation is proof of true modularity. While ideally, with appropriate
 
 Ulitimately the methodology remains the same. Further the methodology remains the same irresepective of the use case which makes it very versitile. The same methodology can be used on other social media apis or multiple ones and by alteribg the filering and analysis module we can customize the use case range. Further for added complexity and dynamicism we can add on to the catagorization module to offere a tier structured priority and severity labels to conents. This is made possible by the LLM's ability to understand context.
 
-# JSON
-# API
-## Reddit's API
-# LLM
+# JSON STRUCTURE AND DATA EXTRACTION
+
+When querying YouTube’s API for videos, the results came back in a structured hierarchical format rather than a simple list. The outer layer is the search lists response for , which is a container for all of the results. Inside this is an items array where each element represents a single video and contains the core metadata ,(the video ID, the channel name, the publication stamp, the title and the description. When the comments are collected ina follow-up query, a separate commentThreads is returned for each video, where each item holds a topLevelComment object containing the comment, the author and the time that it was posted. One example of this can be seen down below
+ 
+In theory a full API response for a single video would contain a large number of additional information depending on what was requested, covering everything from engagement statistics to content rating and reginal restrictions. However storing all of this would be unnecessary and it would just add noise into the dataset without increasing any real forensic value. Because of this reason only the fields that we considered to be forensically and analytically relevant were extracted and carried forward.
+# FIELDS SELECTED FOR EXTRACTION
+
+video_id: the unique identifier for each video assigned to by YouTube. This id prevent the same video from being queried multiple times. It is also the parameter used when querying comments for a specific video
+
+channel_title: The name of the channel, this identifies the source of the content and it can be used for spotting patterns of behaviour linked to a specific creator or organisation over time.
+
+Published_at: The exact timestamp of when the video was published. This si one of the most important fields as it allows data to be placed within a precise timeline and it can be used by the LLM to compare with real-world events.
+
+title and description: the textual content that is associated with the video. The title acts as a headline and the description is the body of the record . Together they create the primary input to the LLM analysis module at the video level.
+
+Video_url: a direct link to the video on Youtube. This is kept so that a reviewer can verify the content in its original context at a later stage. Which is crucial for maintaining integrity and availability.
+
+Comment_author: Display name of the account that posted the comment. Retained for scenarios where the data is to be ever used in a formal investigation.
+
+Comment_text: full text of the comment. The primary field that is analysed by the LLM at the comment level.
+
+Comment_published_at: the timestamp  of when the comment was posted. Useful for making sure whether the comment was made in repose toa  specific event and for building an idea of how discussion developed over time
+
+Everything ekse returned by the API is discarded at this stage. Keeping only the fields above ensures the dataset stays lean and straightforward for the LLM to process
+
+# YouTube Data API
+In order to access YouTube’s Data API, which is googles way of giving developers access to public YouTube content, we had to register a project on Google Cloud Console and generate an API key, which the is attached to every request. One thing we had to be aware of was the quota system. Each project gets 10,000 units per day on the free tier and not every request cost the same amount. A search query itself costs 100 units each time, meanwhile extracting comments only cost 1 unit. This gap can fill up very quickly as 10 searches can end up costing 1000 units. So, to run at a scale, we had to be precise and smart on how many queries can be run each session.
+
+We used two endpoints. The first is youtube/v3/search, which queries the videos based on a search item. We then passed in the search query using the q parameter, set type=video to only return videos, and used maxResults to cap how many results came back to us. The second is youtube/v3/commentThreads, which takes a video ID from the search results and gives back the top-level comments (note. Replies within threads are not included, which is something we noted as a limitation of the current implementation.
+
+# LLM ANALYSIS
+After collecting the data, each record gets passed onto a large language model for analysis. The idea is that the model looks at the content and gives us the severity of the content and a short explanation as to why it was assigned that rating.
+
+We decided to use OpenAI’s GPT-4o-mini model for this, since it is cheaper and faster than most of the larger models. For each record we decided we build a prompt from the extracted fields, and we asked the model to analyse the content against the use case that we are evaluating. The use case is a variable that can be found on the top of the script, so switching it from hate speech around a sports event to something like sexism in the workplace only requires changing that one line and nothing else in the code.
+
+The model is instructed to return a JSON object with two fields. Severity gets rated as high, medium, low or none. The reasoning then gives a couple of sentences to explain the decision it made. The reasoning field is considered one of the more important fields as it allows a human reviewer to look at why the model flagged something rather than having to blindly trust the LLM at face value. This process was considered essential to prevent hallucinations. If the model has misread the text or the context, the reviewer can see that immediately find a remediation.
+In order to get consistent results, we set the temperature of the LLM to 0.3, in this way since it is not a high temperature the LLM does not produce random information but stays true to its goal of accuracy. (note in further work we wanted to increase the temperature with increased training data in order to allow the LLM to think in different contexts)
+
+Once the model responds, the severity and the reasoning fields gets added onto the record and the whole output gets written onto one single output JSON file. Everything goes into that file regardless of its severity and nothing gets discarded at this stage. We decided to do this as leaving an LLM to throw away data before a human review it would be the wrong call especially since we do not have full insight into the model’s internal decision-making process. This would also be essential in a forensic context where it might be essential to go back and reassess the full dataset later. Keeping the full dataset with the models reasoning attached would mean that the reviewer has the full picture and makes the final judgement themselves.
+
 # Hashinf/storage implemnttion

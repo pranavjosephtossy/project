@@ -1,0 +1,35 @@
+[
+    {
+        "collected_at": "2026-04-20T13:28:10.744859Z",
+        "subreddit": "cybersecurity",
+        "post_id": "abc001",
+        "author": "user123",
+        "title": "Suspicious activity reported during football event",
+        "body": "Several fake ticket links were shared before the match.",
+        "created_utc": 1713500000,
+        "permalink": "https://www.reddit.com/r/cybersecurity/comments/abc001/example_post_1/",
+        "hash_sha256": "5302e910affc0377c974aaac9496731d56a9cfae842286c6fdfe4f26a82574f0"
+    },
+    {
+        "collected_at": "2026-04-20T13:28:10.745837Z",
+        "subreddit": "cybersecurity",
+        "post_id": "abc002",
+        "author": "throwaway99",
+        "title": "Possible misinformation campaign in subreddit",
+        "body": "Multiple accounts are posting the same misleading story.",
+        "created_utc": 1713503600,
+        "permalink": "https://www.reddit.com/r/cybersecurity/comments/abc002/example_post_2/",
+        "hash_sha256": "f902b4acb757837606c72d316f19d388bd9f36ce3ede0bea4baa34c650c3fe9c"
+    },
+    {
+        "collected_at": "2026-04-20T13:28:10.746674Z",
+        "subreddit": "cybersecurity",
+        "post_id": "abc003",
+        "author": "investigatorX",
+        "title": "Abusive comments increasing around sports event",
+        "body": "Users are posting slurs and targeted harassment.",
+        "created_utc": 1713507200,
+        "permalink": "https://www.reddit.com/r/cybersecurity/comments/abc003/example_post_3/",
+        "hash_sha256": "d5c2890812ae5e59259e17d579d3518e05c4a02859be9ef6d3d563abe4a4db96"
+    }
+]
