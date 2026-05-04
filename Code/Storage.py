@@ -33,6 +33,7 @@ def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
 
     storage_log = add_chain_of_custody_entry("stored","forensic_storage_module")
     final_chain= collection_log+analysis_log_+storage_log
+    
     forensic_package = {
         "raw_content": raw_json,
         "analysis_output": analysis_content,
