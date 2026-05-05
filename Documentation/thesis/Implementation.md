@@ -31,6 +31,7 @@ Ulitimately the methodology remains the same. Further the methodology remains th
 # JSON STRUCTURE AND DATA EXTRACTION
 
 When querying YouTube’s API for videos, the results came back in a structured hierarchical format rather than a simple list. The outer layer is the search lists response for , which is a container for all of the results. Inside this is an items array where each element represents a single video and contains the core metadata ,(the video ID, the channel name, the publication stamp, the title and the description. When the comments are collected ina follow-up query, a separate commentThreads is returned for each video, where each item holds a topLevelComment object containing the comment, the author and the time that it was posted. One example of this can be seen down below
+![alt text](image.png)
  
 In theory a full API response for a single video would contain a large number of additional information depending on what was requested, covering everything from engagement statistics to content rating and reginal restrictions. However storing all of this would be unnecessary and it would just add noise into the dataset without increasing any real forensic value. Because of this reason only the fields that we considered to be forensically and analytically relevant were extracted and carried forward.
 # FIELDS SELECTED FOR EXTRACTION
