@@ -68,5 +68,16 @@ In order to get consistent results, we set the temperature of the LLM to 0.3, in
 
 Once the model responds, the severity and the reasoning fields gets added onto the record and the whole output gets written onto one single output JSON file. Everything goes into that file regardless of its severity and nothing gets discarded at this stage. We decided to do this as leaving an LLM to throw away data before a human review it would be the wrong call especially since we do not have full insight into the model’s internal decision-making process. This would also be essential in a forensic context where it might be essential to go back and reassess the full dataset later. Keeping the full dataset with the models reasoning attached would mean that the reviewer has the full picture and makes the final judgement themselves.
 
-# Hashinf/storage implemnttion
+# Storage implemnttion
+The storage module is tasked with taking the output from collection and analysis stages and creaking a forensic package that can be stored. In the implementation this is carried out by a python function that recieves four inputs: the raw json item, the analysis json which is the output of the analysis module and the collection  and analysis log created by the chain of custody function. The ducntion then performs a series of integrity checks to ensure the data isn't tampered with and finally a forensic package which contains the logs of the chain of custody, hashes, raw json and the llm analysis.
 
+The first step is comparing the hashes of ...
+
+Then generate the chain of custody log by calling the chain of custody function. We pass into it the action perforemed, ie storing data and the moduled it is performed by, ie the storage module. We finaklly compile all three logs, collection, analysis and storage into a single final log for the json item. 
+
+Finally we create the forensic package which will hold the final output of the implementation. To maintain consistancy we will save it as a json file. It will hold the raw json, the anlysis output and chain of custody. The module will finally return this package to main interface.
+
+# Chain of custody
+The chain of custody system is intended to log the path/logic of the entire implementation. It is a simple python function into which each module will pass the action it performed and the module the action was performed by. Additionally inbuilt into the function is a timefunction that logs the exact time the logging took place. 
+
+The purpose of having this system as a function is to ensure the reuability of it by various modules and reducing duplication of work. It is a set standard with the only variables being the action peroformed and the module it was performed by. Even then the variables are fixed and unique to each module. They are automated so even the variations are fixed. 
