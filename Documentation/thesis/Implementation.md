@@ -81,3 +81,7 @@ Finally we create the forensic package which will hold the final output of the i
 The chain of custody system is intended to log the path/logic of the entire implementation. It is a simple python function into which each module will pass the action it performed and the module the action was performed by. Additionally inbuilt into the function is a timefunction that logs the exact time the logging took place. 
 
 The purpose of having this system as a function is to ensure the reuability of it by various modules and reducing duplication of work. It is a set standard with the only variables being the action peroformed and the module it was performed by. Even then the variables are fixed and unique to each module. They are automated so even the variations are fixed. 
+
+`
+storage_log = add_chain_of_custody_entry("Analysis","")
+`
