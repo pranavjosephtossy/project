@@ -1,12 +1,12 @@
 # Initial Implementation
 The process of comming up with a physical implementation of this methodology was a very itterative process. The initial basic thought process revolved around this pipeline:
-Filtering->Collection->Analysis->Storage.
+Filtering->Collection->Analysis->Storage. 1
 We would collect social media data throught an API, quering based on ceetain use cases. The use cases could range from filtering for sexist content to early indicators of crypto scams. Once the relevant data is colected we would analyse it and store data based on if it met the crieteria. If it did it would be stroed in a forensically sound manner.
 This initial pipe line was itterated and improved until we formalized the following pipeline:
-Collection->Analysis->Catagorization->Storage.
+Collection->Analysis->Catagorization->Storage. 2
 Following analysis each data set would be catagorized into three groups. The irrelevant ones, ie the one that do not meet the criteria, the relevant ones, ie they do meet the crietria and the grey area ones, ones we are unsure about. The relavents are passed through the storage module while the third catagorey would requier an human-in-loop reviewr to determine if it is pertinent or not.
 
-Briefly speaking this pipeline would be implemented into three modules. The first one responsiblie for the collections of the data via the social media API. The second module would determine if the conent meets the use case and pass it along to the third module which would follow the digital forensic methodology of storing said data.
+Briefly speaking this pipeline would be implemented into three modules. The first one responsiblie for the collections of the data via the social media API. The second module would determine if the conent meets the use case and pass it along to the third module which would follow the digital forensic methodology of storing said data. 3
 
 Since reddit provides its own proprietory API we can use that as the first module. They way it works is you register with reddit and use the assigned key to query information from them. The information is stored and passed as JSON which is super helpful. The second module would have to be our own program that goes through the queried data and matches set key words relevant to each specific use case. There would be two lists of keywords to be matched. One which are blatently obvious like slurs if the use case accounted for bigotry and a second that could be less obvious dog whistles or comments that could be "sarcastic". The second list is what would potentially need a human-in-loop review. The third module would also be proprietory program which would hash and forensically store relevant data.
 
@@ -20,6 +20,7 @@ Through out this process we had been thinking about how we could implement autom
     Catagorization Module->
     Strorage Module
 `
+4
 
 
 We query the data from the API using filters. Reddit offers extensive querying filters which can be manipulated accourdingly to fit the use case. Once queried we can pass the data into a LLM which then decideds how to catagorize it. It also assigns a priority level thereby pushing the more egregious use case matches forward. Once it has determined if the data fullfills the use case it passes it to the storage module. This in turn is a propretry program that forensically stores the data.
@@ -58,6 +59,7 @@ Everything else returned by the API is discarded at this stage. Keeping only the
 
 # Main interface
 Since the implementation follows the methodology which encourages modularity it was appropriate to have each indiviual functionality work as a function, which one main interface manages. The interface is responsible for callinf each module and managing all the inputs that are passed into it. It is also what saves the final forensic package as a json file.
+5
 
 
 # YouTube Data API
@@ -69,12 +71,13 @@ We used two endpoints. The first is youtube/v3/search, which queries the videos 
 The chain of custody system is intended to log the path/logic of the entire implementation. It is a simple python function into which each module will pass the action it performed and the module the action was performed by. Additionally inbuilt into the function is a timefunction that logs the exact time the logging took place. 
 
 The purpose of having this system as a function is to ensure the reuability of it by various modules and reducing duplication of work. It is a set standard with the only variables being the action peroformed and the module it was performed by. Even then the variables are fixed and unique to each module. They are automated so even the variations are fixed. 
+6
 
 # Seperating json items
 After quering from the api we have a json dump. The way the json is stored is multiple individual comments are all within the same json file. We need to individually select each item and then have it go through out pipeline. The way we do this is itterate through the dumb after collection. We use a for loop, itterating through each individual json item. We then call a collect_item function which will a)return the json item and b)generate the collection log. 
 
 The function will recive the json item as an input. Then generate a collection log by callinf the chain of custody. The log will containt the action performed, collection and module performed by, collection module. It will return the raw json it recieved, without doing anything with it and the collection log.
-
+7
 # LLM ANALYSIS
 After collecting the data, each record gets passed onto a large language model for analysis. The idea is that the model looks at the content and gives us the severity of the content and a short explanation as to why it was assigned that rating.
 
@@ -92,5 +95,4 @@ The first step is comparing the hashes of raw json content to the hash of the co
 
 Finally we create the forensic package which will hold the final output of the implementation. To maintain consistancy we will save it as a json file. It will hold the raw json, the anlysis output and chain of custody. The module will finally return this package to main interface.
 
-
-
+8

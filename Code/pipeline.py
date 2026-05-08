@@ -16,4 +16,4 @@ def run_main():
             analysis_json, analysis_log = analysis(raw_json)
             
             # calls storage passes both jsons and logs
-            evidence_storage(raw_json, analysis_json, collection_log, analysis_log)
+            forensic_package=evidence_storage(raw_json, analysis_json, collection_log, analysis_log)
