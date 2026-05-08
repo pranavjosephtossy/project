@@ -34,8 +34,6 @@ When querying YouTube’s API for videos, the results came back in a structured 
 ![alt text](image.png)
  
 In theory a full API response for a single video would contain a large number of additional information depending on what was requested, covering everything from engagement statistics to content rating and reginal restrictions. However storing all of this would be unnecessary and it would just add noise into the dataset without increasing any real forensic value. Because of this reason only the fields that we considered to be forensically and analytically relevant were extracted and carried forward.
-# Main interface
-Since the whole implementation follows the methodology which encourages modularity we decided
 
 # FIELDS SELECTED FOR EXTRACTION
 
@@ -56,6 +54,11 @@ Comment_text: full text of the comment. The primary field that is analysed by th
 Comment_published_at: the timestamp  of when the comment was posted. Useful for making sure whether the comment was made in repose toa  specific event and for building an idea of how discussion developed over time
 
 Everything else returned by the API is discarded at this stage. Keeping only the fields above ensures the dataset stays lean and straightforward for the LLM to process
+
+
+# Main interface
+Since the implementation follows the methodology which encourages modularity it was appropriate to have each indiviual functionality work as a function, which one main interface manages. The interface is responsible for callinf each module and managing all the inputs that are passed into it. It is also what saves the final forensic package as a json file.
+
 
 # YouTube Data API
 In order to access YouTube’s Data API, which is googles way of giving developers access to public YouTube content, we had to register a project on Google Cloud Console and generate an API key, which the is attached to every request. One thing we had to be aware of was the quota system. Each project gets 10,000 units per day on the free tier and not every request cost the same amount. A search query itself costs 100 units each time, meanwhile extracting comments only cost 1 unit. This gap can fill up very quickly as 10 searches can end up costing 1000 units. So, to run at a scale, we had to be precise and smart on how many queries can be run each session.
