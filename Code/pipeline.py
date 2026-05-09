@@ -7,7 +7,7 @@ def run_main():
         
       user_input=input("1 for synthetic,2 for preinstalled yt and 3 for custom")
       if user_input=="1":
-            with open("Offensive_content_reddit.json","r",encoding="utf-8") as f:
+            with open("positivetest.json","r",encoding="utf-8") as f:
                   json_dump = json.load(f)
 
       elif user_input=="2":
