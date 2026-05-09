@@ -24,6 +24,8 @@ def run_main():
       else:
             print("Invalid input")
 
+      all_packages =[]
+
       for raw_item in json_dump:
             for comment in raw_item['comments']:
 
@@ -36,9 +38,7 @@ def run_main():
                   # calls storage passes both jsons and logs
                   forensic_package=evidence_storage(comment, analysis_json, collection_log, analysis_log)
 
-            print("Forensic Package")
-            print(json.dump(forensic_package, output_file, indent=4))
-            output_file = f"forensic__package{raw_json['video_id']}.json"
-            with open(output_file, "w", encoding="utf-8") as outfile:
-                  json.dump(forensic_package, output_file, indent=4)
+                  all_packages.append(forensic_package)
+      
+      print(json.dumps(all_packages, indent=4))
 run_main()
