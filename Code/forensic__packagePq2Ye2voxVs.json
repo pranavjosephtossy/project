@@ -1,0 +1,36 @@
+{
+    "raw_content": {
+        "comment_id": "UgxuLQcYNCR0k_CkafV4AaABAg",
+        "comment_author": "@kennedysisco8364",
+        "comment_text": "slushy noobz + sam and colby collab would be so fire \u2764\u200d\ud83d\udd25",
+        "comment_published_at": "2026-04-21T22:27:53Z",
+        "comment_hash_sha256": "b0cda7c6f02e8a0de18af2149a11102c232cde5dfe906e970b4e8e87082d6a6c"
+    },
+    "analysis_output": {
+        "comment_id": "UgxuLQcYNCR0k_CkafV4AaABAg",
+        "llm_severity": "none",
+        "llm_reasoning": "The comment expresses enthusiasm for a collaboration and does not contain any hate speech or abusive language.",
+        "content": "slushy noobz + sam and colby collab would be so fire \u2764\u200d\ud83d\udd25"
+    },
+    "hashes": {
+        "initial_raw_json_hash": "",
+        "content_hash": "b0cda7c6f02e8a0de18af2149a11102c232cde5dfe906e970b4e8e87082d6a6c"
+    },
+    "chain_of_custody": [
+        {
+            "timestamp": "2026-05-09T11:14:02.177397+00:00",
+            "action": "collected",
+            "performed_by": "collection_module"
+        },
+        {
+            "timestamp": "2026-05-09T11:14:03.359019+00:00",
+            "action": "analysis",
+            "performed_by": "analysis_module"
+        },
+        {
+            "timestamp": "2026-05-09T11:14:03.360049+00:00",
+            "action": "stored",
+            "performed_by": "forensic_storage_module"
+        }
+    ]
+}

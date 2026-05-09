@@ -1,0 +1,36 @@
+{
+    "raw_content": {
+        "comment_id": "UgxjFZxX9nlszmcjVW14AaABAg",
+        "comment_author": "@hannahballectar0",
+        "comment_text": "martin just know i wouldve caught you \u2764",
+        "comment_published_at": "2026-04-26T20:20:06Z",
+        "comment_hash_sha256": "3554c53f705da73e5310bfa16ee7344370fd07a2f09e37946e81d6e933f7ede3"
+    },
+    "analysis_output": {
+        "comment_id": "UgxjFZxX9nlszmcjVW14AaABAg",
+        "llm_severity": "none",
+        "llm_reasoning": "The comment expresses a personal sentiment and does not contain any hate speech or abusive language.",
+        "content": "martin just know i wouldve caught you \u2764"
+    },
+    "hashes": {
+        "initial_raw_json_hash": "",
+        "content_hash": "3554c53f705da73e5310bfa16ee7344370fd07a2f09e37946e81d6e933f7ede3"
+    },
+    "chain_of_custody": [
+        {
+            "timestamp": "2026-05-09T11:13:49.240915+00:00",
+            "action": "collected",
+            "performed_by": "collection_module"
+        },
+        {
+            "timestamp": "2026-05-09T11:13:52.259664+00:00",
+            "action": "analysis",
+            "performed_by": "analysis_module"
+        },
+        {
+            "timestamp": "2026-05-09T11:13:52.259664+00:00",
+            "action": "stored",
+            "performed_by": "forensic_storage_module"
+        }
+    ]
+}

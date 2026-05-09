@@ -30,7 +30,7 @@ Reply in raw JSON only:
             {"role": "user", "content": prompt},
         ],
         temperature=0.3,
-        max_tokens=50,
+        max_tokens=200,
     )
 
     raw = response.choices[0].message.content.strip()
