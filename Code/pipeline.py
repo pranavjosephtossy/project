@@ -1,22 +1,24 @@
 from Storage import evidence_storage
 from main import analysis
+import json
+from collect_item import collect_item
 
 def run_main():
         
       user_input=input("1 for synthetic,2 for preinstalled yt and 3 for custom")
-      if user_input==1:
-            with open("Offensive_content_reddit","r") as f:
+      if user_input=="1":
+            with open("Offensive_content_reddit.json","r",encoding="utf-8") as f:
                   json_dump = json.load(f)
 
-      elif user_input==2:
-            with open("youtube_collection_with_comments.json","r") as f:
+      elif user_input=="2":
+            with open("youtube_collection_with_comments.json","r",encoding="utf-8") as f:
                   json_dump = json.load(f)
             
-      elif user_input==3:
+      elif user_input=="3":
             user_input_yt_title=input("Enter yt link")
             #calls collection module and gets back raw_json and log item
             collection()
-            with open("youtube_collection_with_comments.json","r") as f:
+            with open("youtube_collection_with_comments.json","r",encoding="utf-8") as f:
                   json_dump = json.load(f)
 
       else:
