@@ -1,5 +1,5 @@
 from Storage import evidence_storage
-from analysis import *
+from main import analysis
 
 def run_main():
         

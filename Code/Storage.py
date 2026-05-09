@@ -12,12 +12,14 @@ def utc_now():
 
 def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
 
-    analysis_content= analysis_output["sha256_hash"]
+    analysis_content= analysis_output["content"]
+    '''
     print("Intrgrity of raw json:")
     if raw_json_hash != sha256(json.dumps(raw_json,sort_keys=True)):
         print("Hash mismatch!!!")
     else:
         print("Hash Matched!")
+    '''
 
     
     print("Integrity between analysis module and collection/raw module json:")
@@ -42,7 +44,6 @@ def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
     
     return forensic_package
 
-raw_json_hash = sha256(json.dumps(example_json, sort_keys=True))
 
     
 

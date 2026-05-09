@@ -20,7 +20,8 @@ Analyse this YouTube {content_type} for: {USE_CASE}
 Content: {text}
 
 Reply in raw JSON only:
-{{"severity": "low/medium/high/none - give on a scale of 1 - 10", "reasoning": "a sentence describing why you assigned that severity"}}
+{{"severity": "low/medium/high/none - give on a scale of 1 - 10", "reasoning": "a sentence describing why you assigned that severity",
+"content":"exact copy of the comment the analysis was done on"}}
 """
     response = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -35,30 +36,21 @@ Reply in raw JSON only:
     raw = response.choices[0].message.content.strip()
     raw = raw.replace("```json", "").replace("```", "").strip()
     result = json.loads(raw)
-    return result["severity"], result["reasoning"]
+    return result
 
 
 def analysis(comment):
     """Takes a single comment dict from pipeline.py, returns (analysis_json, analysis_log)."""
     text = comment.get("comment_text", "")
-    severity, reasoning = analyse_with_llm("comment", text)
+    output = analyse_with_llm("comment", text)
 
     analysis_json = {
         "comment_id": comment.get("comment_id"),
-        "llm_severity": severity,
-        "llm_reasoning": reasoning,
-        "analysed_at": datetime.datetime.now(datetime.timezone.utc).strftime(
-            "%Y-%m-%d %H:%M:%S UTC"
-        ),
+        "llm_severity": output['severity'],
+        "llm_reasoning": output['reasoning'],
+        "content": output['content']
     }
-    analysis_json["sha256_hash"] = hashlib.sha256(
-        json.dumps(analysis_json, sort_keys=True).encode()
-    ).hexdigest()
 
-    analysis_log = [
-        add_chain_of_custody_entry(
-            f"analysed comment for {USE_CASE}", "analysis_module"
-        )
-    ]
+    analysis_log = [add_chain_of_custody_entry("analysis", "analysis_module")]
 
     return analysis_json, analysis_log
