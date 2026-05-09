@@ -4,22 +4,13 @@ import datetime
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
-
+from chain_of_custody import add_chain_of_custody_entry
 
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPEN_AI_API_KEY"))
 
 USE_CASE = "hate speech and abuse"
-
-# load the YouTube data
-with open("youtube_collection_with_comments.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
-
-print(f"{len(data)} video(s) loaded\n")
-
-# every record goes into one list
-all_records = []
 
 
 def analyse_with_llm(content_type, text):
@@ -35,44 +26,39 @@ Reply in raw JSON only:
         model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": "You are a digital forensics content analyser."},
-            {"role": "user", "content": prompt}
+            {"role": "user", "content": prompt},
         ],
         temperature=0.3,
-        max_tokens=50
+        max_tokens=50,
     )
 
-    result = json.loads(response.choices[0].message.content.strip().replace("```json", "").replace("```", ""))
+    raw = response.choices[0].message.content.strip()
+    raw = raw.replace("```json", "").replace("```", "").strip()
+    result = json.loads(raw)
     return result["severity"], result["reasoning"]
 
 
-# loop through each video
-for video in data:
-    video_text = f"Title: {video.get('title')}\nDescription: {video.get('description')}"
-    severity, reasoning = analyse_with_llm("video", video_text)
+def analysis(comment):
+    """Takes a single comment dict from pipeline.py, returns (analysis_json, analysis_log)."""
+    text = comment.get("comment_text", "")
+    severity, reasoning = analyse_with_llm("comment", text)
 
-    video["llm_severity"] = severity
-    video["llm_reasoning"] = reasoning
-    video["sha256_hash"] = hashlib.sha256(json.dumps(video, sort_keys=True).encode()).hexdigest()
-    video["collected_at"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    analysis_json = {
+        "comment_id": comment.get("comment_id"),
+        "llm_severity": severity,
+        "llm_reasoning": reasoning,
+        "analysed_at": datetime.datetime.now(datetime.timezone.utc).strftime(
+            "%Y-%m-%d %H:%M:%S UTC"
+        ),
+    }
+    analysis_json["sha256_hash"] = hashlib.sha256(
+        json.dumps(analysis_json, sort_keys=True).encode()
+    ).hexdigest()
 
-    print(f"[VIDEO] {video.get('video_id')} | {severity} | {reasoning}")
+    analysis_log = [
+        add_chain_of_custody_entry(
+            f"analysed comment for {USE_CASE}", "analysis_module"
+        )
+    ]
 
-    # loop through every comment under the video
-    for comment in video.get("comments", []):
-        severity, reasoning = analyse_with_llm("comment", comment.get("comment_text", ""))
-
-        comment["llm_severity"] = severity
-        comment["llm_reasoning"] = reasoning
-        comment["sha256_hash"] = hashlib.sha256(json.dumps(comment, sort_keys=True).encode()).hexdigest()
-        comment["collected_at"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-
-        print(f"[COMMENT] {comment.get('comment_id')} | {severity} | {reasoning}")
-
-    all_records.append(video)
-    print()
-
-# everything goes into one single JSON filep
-with open("youtube_analysed.json", "w") as f:
-    json.dump(all_records, f, indent=2)
-
-print(f"\n{len(all_records)} video(s) analysed and saved to youtube_analysed.json")
+    return analysis_json, analysis_log
