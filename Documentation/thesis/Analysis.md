@@ -1,14 +1,23 @@
-## Overview
+# Overview
+To test the system end to end we tested it against a YouTube channel named Slushy Noobz. Our query had returned three videos, and the collection module had pulled the five most recent top-level comments under each, giving us a total of fifteen comments. Each and every record was then passed on to the LLM analysis module with use case “hate speech and abuse”. Then the output was written onto a JSON file with severity ratings, reasonings and updated hashes included.
+Since Slushy Noobz was a comedy and gaming channel there dataset almost completely was harmless content. This was actually quite useful to us as we got to see how the system handled non-relevant material as well as the few cases where harmful language did appear in the comments. A more targeted use case query would allow us to produce a higher amount of relevant content, however our search query gave us a clear picture on how the pipeline performed.
 
-## Collection
+# Collection
+The module has worked as expected. The search endpoint had returned three videos for the query and with each the metadata had defined fields such as video ID, channel title, title description, publication stamp and video URL. The fields that we had decided on discarding was not included in the output (engagement statistics, content rating information) keeping our dataset minimal while efficient. Each record received a SHA-256 hash at this stage, before the LLM ever touched the data giving us the opportunity to verify integrity if ever needed.
 
-## Filters
+# Ai Analysis and how it works
+Each of the records was send individually to our OpenAI LLM for analysis. A prompt was built with the required fields and a use case. The model then returned a severity rating and a one sentence explanation of which both were added  to our record. The reason was that this works better than keyword filtering was because the model processes the language at the semantic level rather than just trying to match strings. It is able to understand the context on using harmful language and doesn’t flag it immediately. A keyword list on the other hand would ban anything that matches its list of words in its database. 
+Every video was rated “non” severity, with reasoning that correctly identified them as a gaming and comedy content. Comments expressing personal reactions, affections or a simple age request were also all returned to as benign(note most top level comments wont contain profanity but would be the lower-level content, which was restriction we came across and have noted).
+One comment however was flagged. It contained the phrase “this video annoyed me” and was given a severity level of four out of ten. The models reasoning was that the language was classified as form of negative speech but it did not incite any violence. As the LLM understands frustration and personal experiences it does not flag it as harmful. This is also a useful demonstration as to why human review matters, as the LLM classified the video to have a severity rating of four out of ten , while a human reviewer might classify the video to be a two or a three. However this is also a setback by the model as although it tries to understand the context if the video based on the use case  it does not watch the video itself , which is something  a human reviewer would have to manually do.
+Another comment that was flagged was “helo sushy goons”, it was rated 1 out of 10 for severity, as the model had interpreted it as potentially mocking, which is something a key word filter would never be able to do. This is a false positive as the model interpreted it as friendly banter directed at the community’s channel and not in a harmful context. A reviewer who is reading this can immediately see that the model has misread the tone and dismiss the flag as required.
+One thing worth noting is that the severity field was returned in two different formats, most outputs contained the string “none”, while two of the flagged comments returned numeric scores of both 1 and 4. For consistency is forensic reports the prompt should contain only one format which has been taken account into as something to address.
 
-## Forensic 
-
-## Application thr different Use Cases
-
-# Summary
+# Forensic Integrity
+The forensic side of the system had performed as designed. Each video and comment retained its original hash from the collection stage and new hash was created after the  post-analysis stage. The storage module compares these hashes during processing and any unexpected changed of the original collected fields and the storage would be flagged.
+Each record contains multiple timestamps. One captures when the video or comment was originally posted on YouTube and the other captures when our system collected it and finally when another one when the AI finishes its analysis. Everything is recorded with its own timestamp and note of what module did what. Together this gives a clear trail of everything that had happened, while its not a full legal chain of custody. It follows the same idea and means a reviewer can always see exacty and when everything took place.
 
 # Findings
+The system functions end-to-end. The data that was collected was successfully analysed, hashed and stored in a single output file with full integrity tracking as the methodology and implementation chapters describe. 
+The LLM was able to distinguish harmful content from benign content with reasonable accuracy. Out of all the comments only one of the comments was misinterpreted as  false positive. And one was correctly flagged in a context where human judgement is necessary. The reasoning field worked as expected with an explanation which allowed for a reader to understand why it made its decisions.
+Finally the test confirmed that the system does not produce high false positives on benign content as only one of the eighteen was incorrectly flagged. This is encouraging because it allows for people to deploy the machine without overwhelming a human reviewer with noise, while also forensically preserving the data which would manually take a reviewer a long time to do.
 
