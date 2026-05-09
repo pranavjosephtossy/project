@@ -12,44 +12,36 @@ def utc_now():
 
 def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
 
-    raw_content= raw_json["content"]
-    raw_username= raw_json["username"]
-    analysis_content= analysis_output["content"]
-    analysis_username= analysis_output["username"]
-
+    analysis_content= analysis_output["sha256_hash"]
     print("Intrgrity of raw json:")
     if raw_json_hash != sha256(json.dumps(raw_json,sort_keys=True)):
         print("Hash mismatch!!!")
     else:
         print("Hash Matched!")
-    print("Integrity between analysis module and collection/raw module json:")
-    if sha256(raw_content)!= sha256(analysis_content):
-        print("Hash mismatch, Content does not match!!! Possible LLM hallucination")
-    elif sha256(raw_username)!= sha256(analysis_username):
-        print("Hash mismatch, Username does not match!!! Possible alteration")
-    
-    content_hash= sha256(raw_content)
-    username_hash= sha256(raw_username)
 
-    storage_log = add_chain_of_custody_entry("stored","forensic_storage_module")
-    final_chain= collection_log+analysis_log_+storage_log
+    
+    print("Integrity between analysis module and collection/raw module json:")
+    if raw_json["comment_hash_sha256"]!= sha256(analysis_content):
+        print("Hash mismatch, Content does not match!!! Possible LLM hallucination")
+
+    content_hash= sha256(raw_content)
+
+    storage_log = [add_chain_of_custody_entry("stored","forensic_storage_module")]
+    
+    final_chain= collection_log+analysis_log+storage_log
     
     forensic_package = {
         "raw_content": raw_json,
-        "analysis_output": analysis_content,
+        "analysis_output": analysis_output,
         "hashes":{
             "initial_raw_json_hash": raw_json_hash,
-            "content_hash": sha256(analysis_content),
-            "username_hash": sha256(analysis_username)
+            "content_hash": raw_json["comment_hash_sha256"]
             },
         "chain_of_custody": final_chain
         }
-    return 
-
-
+    return forensic_package
 
 raw_json_hash = sha256(json.dumps(example_json, sort_keys=True))
 
-#evidence_storage(example_json,analysis_json)
     
 
