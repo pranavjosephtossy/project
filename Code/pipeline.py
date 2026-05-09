@@ -38,3 +38,4 @@ def run_main():
             output_file = f"forensic__package{raw_json['video_id']}.json"
             with open(output_file, "w", encoding="utf-8") as outfile:
                   json.dump(forensic_package, output_file, indent=4)
+run_main()
