@@ -20,16 +20,18 @@ def run_main():
 
       else:
             print("Invalid input")
-            
-      for raw_item in json_dump:
-            #i need a way to log each raw item has been collected
-            raw_json, collection_log = collect_item(raw_item)
 
-            #calls analysis passes raw_json and gets analysis_json and log item
-            analysis_json, analysis_log = analysis(raw_json)
-            
-            # calls storage passes both jsons and logs
-            forensic_package=evidence_storage(raw_json, analysis_json, collection_log, analysis_log)
+      for raw_item in json_dump:
+            for comment in raw_item['comments']:
+
+                  #i need a way to log each raw comment item has been collected
+                  raw_json, collection_log = collect_item(comment)
+
+                  #calls analysis passes raw_json_comment and gets analysis_json and log item
+                  analysis_json, analysis_log = analysis(comment)
+                  
+                  # calls storage passes both jsons and logs
+                  forensic_package=evidence_storage(comment, analysis_json, collection_log, analysis_log)
 
             print("Forensic Package")
             print(json.dump(forensic_package, output_file, indent=4))

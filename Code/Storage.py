@@ -39,6 +39,7 @@ def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
             },
         "chain_of_custody": final_chain
         }
+    
     return forensic_package
 
 raw_json_hash = sha256(json.dumps(example_json, sort_keys=True))
