@@ -10,7 +10,7 @@ def run_main():
             print("Not implemented yet")
 
       elif user_input=="2":
-            with open("youtube_collection_with_comments.json","r", encoding="utf-8") as f:
+            with open("Offensive_content_reddit.json","r", encoding="utf-8") as f:
                   json_dump = json.load(f)
             
       elif user_input=="3":
