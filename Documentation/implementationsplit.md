@@ -1,2 +1,0 @@
-We can query from only one app like reddit but we can query under multiple pretenses/scenarios.
-One could be sports events based hate crime, dog whistles on religions, sexism and crypto/trading scams and irregularities.
