@@ -1,0 +1,182 @@
+[
+    {
+        "raw_content": {
+            "comment_id": "UgxEKH1LL8PCNvwuy5h4AaABAg",
+            "comment_author": "@laurasliife",
+            "comment_text": "i work at canadian tire and this made me flinch 0:18",
+            "comment_published_at": "2026-04-26T20:33:50Z",
+            "comment_hash_sha256": "1a212999796c261aada364d1f06bf81f32f0ab1bc5db1b2f2a620ccb825b4a3f"
+        },
+        "analysis_output": {
+            "comment_id": "UgxEKH1LL8PCNvwuy5h4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses a personal reaction to a video and does not contain any hate speech or abusive language.",
+            "content": "i work at canadian tire and this made me flinch 0:18"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "1a212999796c261aada364d1f06bf81f32f0ab1bc5db1b2f2a620ccb825b4a3f"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:03.271338+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:04.954502+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:04.954609+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgwfxxI9y87sLgT9EIB4AaABAg",
+            "comment_author": "@jasonpoggers2658",
+            "comment_text": "As a competitive geocacher, this video annoyed me",
+            "comment_published_at": "2026-04-26T20:27:20Z",
+            "comment_hash_sha256": "7de99a5b8f714978ca63f96769b838c4c908295ccb2846c47b3fb973e9613f80"
+        },
+        "analysis_output": {
+            "comment_id": "UgwfxxI9y87sLgT9EIB4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses a personal opinion about the video without using hate speech or abusive language.",
+            "content": "As a competitive geocacher, this video annoyed me"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "7de99a5b8f714978ca63f96769b838c4c908295ccb2846c47b3fb973e9613f80"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:04.954630+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:05.961723+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:05.961764+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgyBu6b0Ph_7NSL-8q54AaABAg",
+            "comment_author": "@retr0blum3",
+            "comment_text": "9:15 son\ud83d\ude2d\ud83d\ude2d",
+            "comment_published_at": "2026-04-26T20:21:43Z",
+            "comment_hash_sha256": "36399905b3c343873483cf474b5a98db862d2abd2dba7e6777f89b9aa5bad846"
+        },
+        "analysis_output": {
+            "comment_id": "UgyBu6b0Ph_7NSL-8q54AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses an emotional reaction with crying emojis and does not contain any hate speech or abusive language.",
+            "content": "9:15 son\ud83d\ude2d\ud83d\ude2d"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "36399905b3c343873483cf474b5a98db862d2abd2dba7e6777f89b9aa5bad846"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:05.961769+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:06.770869+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:06.771014+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "Ugx2vrvprS-fMh04TuR4AaABAg",
+            "comment_author": "@sugarydream",
+            "comment_text": "the motion sickness i got ooooof",
+            "comment_published_at": "2026-04-26T20:21:13Z",
+            "comment_hash_sha256": "325c1b35805062c5db0e4b908ee418d68cb46452a7360e8e726573ecc88cdf2f"
+        },
+        "analysis_output": {
+            "comment_id": "Ugx2vrvprS-fMh04TuR4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses a personal experience of motion sickness without any hateful or abusive language.",
+            "content": "the motion sickness i got ooooof"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "325c1b35805062c5db0e4b908ee418d68cb46452a7360e8e726573ecc88cdf2f"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:06.771026+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:07.476259+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:07.476445+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgxjFZxX9nlszmcjVW14AaABAg",
+            "comment_author": "@hannahballectar0",
+            "comment_text": "martin just know i wouldve caught you \u2764",
+            "comment_published_at": "2026-04-26T20:20:06Z",
+            "comment_hash_sha256": "3554c53f705da73e5310bfa16ee7344370fd07a2f09e37946e81d6e933f7ede3"
+        },
+        "analysis_output": {
+            "comment_id": "UgxjFZxX9nlszmcjVW14AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses a personal sentiment without any hate speech or abusive language. It appears to be supportive rather than harmful.",
+            "content": "martin just know i wouldve caught you \u2764"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "3554c53f705da73e5310bfa16ee7344370fd07a2f09e37946e81d6e933f7ede3"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:07.476465+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:08.217866+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:08.218011+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    }
+]

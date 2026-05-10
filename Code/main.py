@@ -12,7 +12,7 @@ client = OpenAI(api_key=os.getenv("OPEN_AI_API_KEY"))
 
 USE_CASE = "hate speech and abuse"
 
-
+#communicates with LLM, directs the exact form of response
 def analyse_with_llm(content_type, text):
     prompt = f"""
 Analyse this YouTube {content_type} for: {USE_CASE}
@@ -50,7 +50,7 @@ def analysis(comment):
         "llm_reasoning": output['reasoning'],
         "content": output['content']
     }
-
+    #analysis log
     analysis_log = [add_chain_of_custody_entry("analysis", "analysis_module")]
 
     return analysis_json, analysis_log

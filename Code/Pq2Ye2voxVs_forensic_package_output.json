@@ -1,0 +1,182 @@
+[
+    {
+        "raw_content": {
+            "comment_id": "Ugw6zxtjQhsUBw_Ktnh4AaABAg",
+            "comment_author": "@lynn..salameh",
+            "comment_text": "The darkest dark web video",
+            "comment_published_at": "2026-04-25T23:52:48Z",
+            "comment_hash_sha256": "2e962158cc0da5ee65e1d7d68de38ddffa7496016f2791d18d253029e4ede11f"
+        },
+        "analysis_output": {
+            "comment_id": "Ugw6zxtjQhsUBw_Ktnh4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it merely references a type of video content without any derogatory remarks.",
+            "content": "The darkest dark web video"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "2e962158cc0da5ee65e1d7d68de38ddffa7496016f2791d18d253029e4ede11f"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:14.843936+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:16.103613+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:16.103706+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgzZVSKnrdE_rm2tuWt4AaABAg",
+            "comment_author": "@sofiapuszynska9201",
+            "comment_text": "funny",
+            "comment_published_at": "2026-04-23T01:52:30Z",
+            "comment_hash_sha256": "748425dbc289d5369c874481c735f6ef0719532246867be436a17bdbb49173b0"
+        },
+        "analysis_output": {
+            "comment_id": "UgzZVSKnrdE_rm2tuWt4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment is neutral and does not contain any hate speech or abusive language.",
+            "content": "funny"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "748425dbc289d5369c874481c735f6ef0719532246867be436a17bdbb49173b0"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:16.103721+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:16.797472+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:16.797565+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgzQ4o_75SeFmGOVunB4AaABAg",
+            "comment_author": "@broski7479",
+            "comment_text": "this video is possibly their best i ALWAYS cry laugh whenever i watch it seriously guys this is a work of art",
+            "comment_published_at": "2026-04-23T01:34:11Z",
+            "comment_hash_sha256": "8d3400dfa0a73352accd1e1885c39d7cb3491b71b5edf691305ac91f5726c155"
+        },
+        "analysis_output": {
+            "comment_id": "UgzQ4o_75SeFmGOVunB4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses positive feelings about the video and does not contain any hate speech or abusive language.",
+            "content": "this video is possibly their best i ALWAYS cry laugh whenever i watch it seriously guys this is a work of art"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "8d3400dfa0a73352accd1e1885c39d7cb3491b71b5edf691305ac91f5726c155"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:16.797577+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:17.734204+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:17.734378+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "Ugyqf6MQla4f9rS2cl54AaABAg",
+            "comment_author": "@Fentween97",
+            "comment_text": "Helo sushy goons",
+            "comment_published_at": "2026-04-23T00:05:24Z",
+            "comment_hash_sha256": "37ec7b370617cd2c2f38783dfefb944b784e8012a9d4783792dcf7d8f2de7b9a"
+        },
+        "analysis_output": {
+            "comment_id": "Ugyqf6MQla4f9rS2cl54AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it appears to be a casual greeting with no offensive intent.",
+            "content": "Helo sushy goons"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "37ec7b370617cd2c2f38783dfefb944b784e8012a9d4783792dcf7d8f2de7b9a"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:17.734402+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:19.022133+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:19.022195+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgxuLQcYNCR0k_CkafV4AaABAg",
+            "comment_author": "@kennedysisco8364",
+            "comment_text": "slushy noobz + sam and colby collab would be so fire \u2764\u200d\ud83d\udd25",
+            "comment_published_at": "2026-04-21T22:27:53Z",
+            "comment_hash_sha256": "b0cda7c6f02e8a0de18af2149a11102c232cde5dfe906e970b4e8e87082d6a6c"
+        },
+        "analysis_output": {
+            "comment_id": "UgxuLQcYNCR0k_CkafV4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses a positive opinion about a potential collaboration and does not contain any hate speech or abusive language.",
+            "content": "slushy noobz + sam and colby collab would be so fire \u2764\u200d\ud83d\udd25"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "b0cda7c6f02e8a0de18af2149a11102c232cde5dfe906e970b4e8e87082d6a6c"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:19.022203+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:20.098526+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:20.098670+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    }
+]

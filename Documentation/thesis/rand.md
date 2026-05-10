@@ -69,6 +69,20 @@ evidence_storage(raw_json, analysis_output, col_log, ana_log)
     └── chain_of_custody
 ```
 
+```bash
+Methodology
+├── Filtering
+├── Collection
+├── Analysis
+├── Categorisation
+└── Storage
+```
+```bash
+Methodology
+├── Collection
+├── Analysis
+└── Storage
+```
 
 ```bash
 collect_item(raw_item)
@@ -78,3 +92,4 @@ collect_item(raw_item)
 ├── col_log = [ chain_of_custody_entry ]
 └── returns raw_item, col_log
 ```
+

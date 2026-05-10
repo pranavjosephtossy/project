@@ -1,0 +1,182 @@
+[
+    {
+        "raw_content": {
+            "comment_id": "Ugx9cRgFaMyYzSJI5KV4AaABAg",
+            "comment_author": "@emilybarnes-mu6hc",
+            "comment_text": "Wait wasn\u2019t there another video of them playing this game?",
+            "comment_published_at": "2026-04-26T20:08:57Z",
+            "comment_hash_sha256": "28eaaea88c70d521257d82df54f418d01d9002b5293a5ab81578c7164b0154d3"
+        },
+        "analysis_output": {
+            "comment_id": "Ugx9cRgFaMyYzSJI5KV4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment is a neutral inquiry about a video and does not contain any hate speech or abusive language.",
+            "content": "Wait wasn\u2019t there another video of them playing this game?"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "28eaaea88c70d521257d82df54f418d01d9002b5293a5ab81578c7164b0154d3"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:08.219731+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:09.272832+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:09.273040+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgycSoG7blz4tLmIbWx4AaABAg",
+            "comment_author": "@TanakaCepu",
+            "comment_text": "not yash appearing again\ud83d\ude2d\ud83d\ude2d",
+            "comment_published_at": "2026-04-26T11:34:59Z",
+            "comment_hash_sha256": "b120f962e42c2641dc64eef5ab8f3b18cc5d6e48d1ca3961dafab7733245d209"
+        },
+        "analysis_output": {
+            "comment_id": "UgycSoG7blz4tLmIbWx4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses a personal reaction (sadness) to the appearance of someone named Yash but does not contain any hate speech or abusive language.",
+            "content": "not yash appearing again\ud83d\ude2d\ud83d\ude2d"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "b120f962e42c2641dc64eef5ab8f3b18cc5d6e48d1ca3961dafab7733245d209"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:09.273067+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:10.625476+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:10.625602+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgxF-DmgOR_kKWDFl9R4AaABAg",
+            "comment_author": "@TanakaCepu",
+            "comment_text": "not yash appearing again\ud83d\ude2d\ud83d\ude2d",
+            "comment_published_at": "2026-04-26T11:34:42Z",
+            "comment_hash_sha256": "8ab8305529828f8e5d5c81d35774bdef67ea3545abb7fa17c31b2d5d0e0c9a47"
+        },
+        "analysis_output": {
+            "comment_id": "UgxF-DmgOR_kKWDFl9R4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses a personal reaction (sadness) to someone's appearance without any hateful or abusive language.",
+            "content": "not yash appearing again\ud83d\ude2d\ud83d\ude2d"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "8ab8305529828f8e5d5c81d35774bdef67ea3545abb7fa17c31b2d5d0e0c9a47"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:10.625620+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:11.701216+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:11.701369+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "UgzuJnorKeb9eK-nz6F4AaABAg",
+            "comment_author": "@mr.guy1038",
+            "comment_text": "plz martin play stardew valley",
+            "comment_published_at": "2026-04-26T09:07:49Z",
+            "comment_hash_sha256": "d90398d3599f38320a4ea08478eeeb8288fd296dd80071f208e142cf423940f7"
+        },
+        "analysis_output": {
+            "comment_id": "UgzuJnorKeb9eK-nz6F4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment is a simple request for someone named Martin to play a video game and does not contain any hate speech or abusive language.",
+            "content": "plz martin play stardew valley"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "d90398d3599f38320a4ea08478eeeb8288fd296dd80071f208e142cf423940f7"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:11.701382+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:13.088188+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:13.088364+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "Ugwfa36y6IjO-Y_PGlB4AaABAg",
+            "comment_author": "@MWMWMSTILLCHILLMWMWMWMCHILLWMW",
+            "comment_text": "1:53 DUNE MENTIONED",
+            "comment_published_at": "2026-04-26T05:30:14Z",
+            "comment_hash_sha256": "d8f7f7e1a18b41266db375270ba7a853f0e6ca5455d073ae171efb29bae0b7e4"
+        },
+        "analysis_output": {
+            "comment_id": "Ugwfa36y6IjO-Y_PGlB4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it simply mentions a timestamp and a title without any negative connotations.",
+            "content": "1:53 DUNE MENTIONED"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "d8f7f7e1a18b41266db375270ba7a853f0e6ca5455d073ae171efb29bae0b7e4"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-10T09:50:13.088377+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:14.842034+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-10T09:50:14.842112+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    }
+]

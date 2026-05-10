@@ -24,6 +24,7 @@ def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
     
     print("Integrity between analysis module and collection/raw module json: ")
     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    #if there isnt any hash in raw
     if raw_json["comment_hash_sha256"]=="":
         if raw_json["comment_hash_sha256"]!= sha256(analysis_content):
             print("Hash mismatch, Content does not match!!! Possible LLM hallucination")
@@ -37,8 +38,9 @@ def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
     print("")
     content_hash= raw_json["comment_hash_sha256"]
 
+    #storage log
     storage_log = [add_chain_of_custody_entry("stored","forensic_storage_module")]
-    
+    #final log of all logs
     final_chain= collection_log+analysis_log+storage_log
     
     forensic_package = {
