@@ -10,9 +10,10 @@ Main()
 
 ```bash
 Main()
-├── Reddit API
+├── API Collection module
 │   └── Filtering and Collection
 ├── AI/LLM Analysis Module
+│   ├── Analysis
 │   └── Categorization
 └── Storage Module
     ├── Integrity check
