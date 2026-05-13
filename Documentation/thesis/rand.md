@@ -69,7 +69,30 @@ evidence_storage(raw_json, analysis_output, col_log, ana_log)
     ├── hashes
     └── chain_of_custody
 ```
-
+```bash
+collection(link)
+├── get video from link
+│   ├── get metadata
+│   └── hash vid
+├── get comments(x)
+│   ├── get metadata
+│   └── get hash
+└── build raw_json
+    ├── video metadata
+    ├── comments
+    └── hashes
+```
+```bash
+analysis(raw_json)
+├── LLM Promt
+│   ├── pass raw JSON in
+│   ├── specify LLM JSON output   
+│   └── get analysis_output
+├── add_chain_of_custody_entry()
+│   ├── action="analysis"
+│   └──performed_by="analysis_module"
+└── return nalysis_output
+```
 ```bash
 Methodology
 ├── Filtering

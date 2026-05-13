@@ -2,6 +2,7 @@ from Storage import evidence_storage
 from main import analysis
 import json
 from collect_item import collect_item
+from api_collect import api_collect_module
 
 def run_main():
         
@@ -18,10 +19,9 @@ def run_main():
                          
       elif user_input=="3":
             user_input_yt_title=input("Enter yt link")
-            #calls collection module, passes in the yt link and gets back raw_json and log item
-            #collection()
-            #have not integreted this function yet
-            #YoutubeTest2()
+            #calls collection module, passes in the yt link and gets back json file location
+            filename=api_collect_module(user_input_yt_title)
+            print("Vid json file saved as: ", filename)
             
       else:
             print("Invalid input")
