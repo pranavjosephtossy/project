@@ -9,6 +9,7 @@ def run_main():
       print("1 for synthetic,2 for preinstalled yt and 3 for custom")
       user_input=input("Enter: ")
       print("")
+
       if user_input=="1":
             filename="positivetest.json"
             print("Will use synthetic dataset for analysis")
@@ -18,7 +19,13 @@ def run_main():
             print("Will use previously queried YouTube API JSON of Slushy Noobz for analysis")
                          
       elif user_input=="3":
-            user_input_yt_title=input("Enter yt link")
+            print("Enter yt link")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            user_input_yt_title=input("Enter: ")
             #calls collection module, passes in the yt link and gets back json file location
             filename=api_collect_module(user_input_yt_title)
             print("Vid json file saved as: ", filename)

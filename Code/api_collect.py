@@ -1,6 +1,7 @@
 import requests
 import hashlib
 import json
+import requests
 from datetime import datetime
 from urllib.parse import urlparse, parse_qs
 '''
@@ -9,7 +10,7 @@ MAX_RESULTS = 3          # number of videos to collect
 MAX_COMMENTS = 5         # number of comments per video
 '''
 # YouTube Data API v3 setup again, but now with comments collection too
-API_KEY = ""
+API_KEY = "AIzaSyDQNBLpAiY9N_pZg4kBGZOtvj9UXmKvrtU"
 
 def api_collect_module(video_link):
     parsed = urlparse(video_link)

@@ -28,9 +28,10 @@ def evidence_storage(raw_json, analysis_output, collection_log, analysis_log):
     if raw_json["comment_hash_sha256"]=="":
         if raw_json["comment_hash_sha256"]!= sha256(analysis_content):
             print("Hash mismatch, Content does not match!!! Possible LLM hallucination")
+            
     elif sha256(raw_json["comment_text"])!= sha256(analysis_content):
                     print("Hash mismatch, Content does not match!!! Possible LLM hallucination")
-                    print(sha256(raw_json["comment_text"]),sha256(analysis_content["content"]))
+                    print(sha256(raw_json["comment_text"]),sha256(analysis_content))
     else:
           print("Hash Matched!!!! Check complete!")
           

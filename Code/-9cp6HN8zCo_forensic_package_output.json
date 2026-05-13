@@ -1,0 +1,38 @@
+[
+    {
+        "raw_content": {
+            "comment_id": "UgwTHIPoXEWa79lahKV4AaABAg",
+            "comment_author": "@user-ob4kn3rp3j",
+            "comment_text": "I wish this game got a resurgence of new players",
+            "comment_published_at": "2026-03-20T07:36:37Z",
+            "comment_hash_sha256": "bd36cc5361eec71cbcd696a08aa99dded134a020f147a861ade8606617e3758c"
+        },
+        "analysis_output": {
+            "comment_id": "UgwTHIPoXEWa79lahKV4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses a desire for the game to gain new players, which is a neutral and positive sentiment without any hate speech or abusive language.",
+            "content": "I wish this game got a resurgence of new players"
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "bd36cc5361eec71cbcd696a08aa99dded134a020f147a861ade8606617e3758c"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-13T19:59:54.769863+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-13T19:59:57.265597+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-13T19:59:57.265719+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    }
+]

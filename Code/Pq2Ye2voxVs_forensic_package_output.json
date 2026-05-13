@@ -1,35 +1,34 @@
 [
     {
         "raw_content": {
-            "comment_id": "Ugw6zxtjQhsUBw_Ktnh4AaABAg",
-            "comment_author": "@lynn..salameh",
-            "comment_text": "The darkest dark web video",
-            "comment_published_at": "2026-04-25T23:52:48Z",
-            "comment_hash_sha256": "2e962158cc0da5ee65e1d7d68de38ddffa7496016f2791d18d253029e4ede11f"
+            "comment_id": "c1",
+            "comment_author": "ryaphy26",
+            "comment_text": "To be honest spending 90 minutes angry at how awful it is is how I like men's football too",
+            "comment_hash_sha256": "e90dac8f236908b9460ebef1df811bda5a0aaa8ad06ce04cb74d564f63e07b69"
         },
         "analysis_output": {
-            "comment_id": "Ugw6zxtjQhsUBw_Ktnh4AaABAg",
+            "comment_id": "c1",
             "llm_severity": "none",
-            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it merely references a type of video content without any derogatory remarks.",
-            "content": "The darkest dark web video"
+            "llm_reasoning": "The comment expresses a personal opinion about men's football without using hate speech or abusive language.",
+            "content": "To be honest spending 90 minutes angry at how awful it is is how I like men's football too"
         },
         "hashes": {
             "initial_raw_json_hash": "",
-            "content_hash": "2e962158cc0da5ee65e1d7d68de38ddffa7496016f2791d18d253029e4ede11f"
+            "content_hash": "e90dac8f236908b9460ebef1df811bda5a0aaa8ad06ce04cb74d564f63e07b69"
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:14.843936+00:00",
+                "timestamp": "2026-05-13T19:52:37.561022+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:16.103613+00:00",
+                "timestamp": "2026-05-13T19:52:39.369686+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:16.103706+00:00",
+                "timestamp": "2026-05-13T19:52:39.369908+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
@@ -37,35 +36,34 @@
     },
     {
         "raw_content": {
-            "comment_id": "UgzZVSKnrdE_rm2tuWt4AaABAg",
-            "comment_author": "@sofiapuszynska9201",
-            "comment_text": "funny",
-            "comment_published_at": "2026-04-23T01:52:30Z",
-            "comment_hash_sha256": "748425dbc289d5369c874481c735f6ef0719532246867be436a17bdbb49173b0"
+            "comment_id": "c2",
+            "comment_author": "authrwarrior41",
+            "comment_text": "Pathetic!! Women shouldn't be playing footbal. Just stay in the kitchen ffs",
+            "comment_hash_sha256": "8d57c130772692fd75eb36d3d35bc8d7f8615a6851bc4e3f27854db1c6a265a1"
         },
         "analysis_output": {
-            "comment_id": "UgzZVSKnrdE_rm2tuWt4AaABAg",
-            "llm_severity": "none",
-            "llm_reasoning": "The comment is neutral and does not contain any hate speech or abusive language.",
-            "content": "funny"
+            "comment_id": "c2",
+            "llm_severity": "8",
+            "llm_reasoning": "The comment expresses a derogatory opinion about women participating in football, reinforces gender stereotypes, and includes a dismissive phrase that can be considered abusive.",
+            "content": "Pathetic!! Women shouldn't be playing footbal. Just stay in the kitchen ffs"
         },
         "hashes": {
             "initial_raw_json_hash": "",
-            "content_hash": "748425dbc289d5369c874481c735f6ef0719532246867be436a17bdbb49173b0"
+            "content_hash": "8d57c130772692fd75eb36d3d35bc8d7f8615a6851bc4e3f27854db1c6a265a1"
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:16.103721+00:00",
+                "timestamp": "2026-05-13T19:52:39.369932+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:16.797472+00:00",
+                "timestamp": "2026-05-13T19:52:42.892653+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:16.797565+00:00",
+                "timestamp": "2026-05-13T19:52:42.892787+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
@@ -73,35 +71,34 @@
     },
     {
         "raw_content": {
-            "comment_id": "UgzQ4o_75SeFmGOVunB4AaABAg",
-            "comment_author": "@broski7479",
-            "comment_text": "this video is possibly their best i ALWAYS cry laugh whenever i watch it seriously guys this is a work of art",
-            "comment_published_at": "2026-04-23T01:34:11Z",
-            "comment_hash_sha256": "8d3400dfa0a73352accd1e1885c39d7cb3491b71b5edf691305ac91f5726c155"
+            "comment_id": "c3",
+            "comment_author": "lifeguard1991",
+            "comment_text": "It feels almost patronising at times",
+            "comment_hash_sha256": "531ab36d7090cbef07a7dfb34f37f575e3f66b6827cbdb677711f5ea3920bd38"
         },
         "analysis_output": {
-            "comment_id": "UgzQ4o_75SeFmGOVunB4AaABAg",
+            "comment_id": "c3",
             "llm_severity": "none",
-            "llm_reasoning": "The comment expresses positive feelings about the video and does not contain any hate speech or abusive language.",
-            "content": "this video is possibly their best i ALWAYS cry laugh whenever i watch it seriously guys this is a work of art"
+            "llm_reasoning": "The comment expresses a personal opinion and does not contain any hate speech or abusive language.",
+            "content": "It feels almost patronising at times"
         },
         "hashes": {
             "initial_raw_json_hash": "",
-            "content_hash": "8d3400dfa0a73352accd1e1885c39d7cb3491b71b5edf691305ac91f5726c155"
+            "content_hash": "531ab36d7090cbef07a7dfb34f37f575e3f66b6827cbdb677711f5ea3920bd38"
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:16.797577+00:00",
+                "timestamp": "2026-05-13T19:52:42.892810+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:17.734204+00:00",
+                "timestamp": "2026-05-13T19:52:44.108849+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:17.734378+00:00",
+                "timestamp": "2026-05-13T19:52:44.108971+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
@@ -109,35 +106,34 @@
     },
     {
         "raw_content": {
-            "comment_id": "Ugyqf6MQla4f9rS2cl54AaABAg",
-            "comment_author": "@Fentween97",
-            "comment_text": "Helo sushy goons",
-            "comment_published_at": "2026-04-23T00:05:24Z",
-            "comment_hash_sha256": "37ec7b370617cd2c2f38783dfefb944b784e8012a9d4783792dcf7d8f2de7b9a"
+            "comment_id": "c4",
+            "comment_author": "plthead",
+            "comment_text": "It's reminiscent of how pundits used to talk about African teams at the World Cup.",
+            "comment_hash_sha256": "2942a186bcec9f734c7fe40c0ba7c12465d6f42ee2aabaa387b3915c551265b3"
         },
         "analysis_output": {
-            "comment_id": "Ugyqf6MQla4f9rS2cl54AaABAg",
-            "llm_severity": "none",
-            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it appears to be a casual greeting with no offensive intent.",
-            "content": "Helo sushy goons"
+            "comment_id": "c4",
+            "llm_severity": "2",
+            "llm_reasoning": "The comment references a historical perspective on how African teams were discussed, which may imply a critique of stereotypes but does not contain overt hate speech or abusive language.",
+            "content": "It's reminiscent of how pundits used to talk about African teams at the World Cup."
         },
         "hashes": {
             "initial_raw_json_hash": "",
-            "content_hash": "37ec7b370617cd2c2f38783dfefb944b784e8012a9d4783792dcf7d8f2de7b9a"
+            "content_hash": "2942a186bcec9f734c7fe40c0ba7c12465d6f42ee2aabaa387b3915c551265b3"
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:17.734402+00:00",
+                "timestamp": "2026-05-13T19:52:44.108989+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:19.022133+00:00",
+                "timestamp": "2026-05-13T19:52:46.471211+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:19.022195+00:00",
+                "timestamp": "2026-05-13T19:52:46.471350+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
@@ -145,35 +141,104 @@
     },
     {
         "raw_content": {
-            "comment_id": "UgxuLQcYNCR0k_CkafV4AaABAg",
-            "comment_author": "@kennedysisco8364",
-            "comment_text": "slushy noobz + sam and colby collab would be so fire \u2764\u200d\ud83d\udd25",
-            "comment_published_at": "2026-04-21T22:27:53Z",
-            "comment_hash_sha256": "b0cda7c6f02e8a0de18af2149a11102c232cde5dfe906e970b4e8e87082d6a6c"
+            "comment_id": "c5",
+            "comment_author": "curiousgeorge",
+            "comment_text": "Should have stayed in the ki.... is all I am saying lol",
+            "comment_hash_sha256": "91c78a3959459691b4280b2f451a6d74f828aa5e696b259ba6aa0a9f780c18ae"
         },
         "analysis_output": {
-            "comment_id": "UgxuLQcYNCR0k_CkafV4AaABAg",
-            "llm_severity": "none",
-            "llm_reasoning": "The comment expresses a positive opinion about a potential collaboration and does not contain any hate speech or abusive language.",
-            "content": "slushy noobz + sam and colby collab would be so fire \u2764\u200d\ud83d\udd25"
+            "comment_id": "c5",
+            "llm_severity": "medium",
+            "llm_reasoning": "The comment appears to contain a potentially derogatory term that could be interpreted as hate speech, particularly if the term is a racial or ethnic slur. The ellipsis suggests that the comment may be incomplete or intentionally vague, which can imply a negative sentiment towards a specific group. However, without the full context, it is difficult to assess the severity definitively.",
+            "content": "Should have stayed in the ki.... is all I am saying lol"
         },
         "hashes": {
             "initial_raw_json_hash": "",
-            "content_hash": "b0cda7c6f02e8a0de18af2149a11102c232cde5dfe906e970b4e8e87082d6a6c"
+            "content_hash": "91c78a3959459691b4280b2f451a6d74f828aa5e696b259ba6aa0a9f780c18ae"
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:19.022203+00:00",
+                "timestamp": "2026-05-13T19:52:46.471377+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:20.098526+00:00",
+                "timestamp": "2026-05-13T19:52:48.904701+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:20.098670+00:00",
+                "timestamp": "2026-05-13T19:52:48.904815+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "c6",
+            "comment_author": "Space_Hunzo",
+            "comment_text": "Both things can be true. The men\u2019s game is too negative, but the women\u2019s game gets pandering praise.",
+            "comment_hash_sha256": "db9d5fe9eaa19e872c7345004b7c8cdd2951632e5013651fc7693ce5c920b756"
+        },
+        "analysis_output": {
+            "comment_id": "c6",
+            "llm_severity": "2",
+            "llm_reasoning": "The comment expresses an opinion about the men's and women's games without using derogatory language or personal attacks, which keeps it within the realm of critique rather than hate speech or abuse.",
+            "content": "Both things can be true. The men\u2019s game is too negative, but the women\u2019s game gets pandering praise."
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "db9d5fe9eaa19e872c7345004b7c8cdd2951632e5013651fc7693ce5c920b756"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-13T19:52:48.904831+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-13T19:52:50.844469+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-13T19:52:50.844594+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    },
+    {
+        "raw_content": {
+            "comment_id": "c7",
+            "comment_author": "jlo1989",
+            "comment_text": "Stop trying to sell it like it\u2019s the same level as the men\u2019s Champions League. Just call things honestly.",
+            "comment_hash_sha256": "2ff45ba9e9b1e9936940b9368025ba052f3b96424593387dcfbc49b7b5b59cb3"
+        },
+        "analysis_output": {
+            "comment_id": "c7",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment expresses an opinion about the comparison between women's and men's Champions League without using hate speech or abusive language.",
+            "content": "Stop trying to sell it like it\u2019s the same level as the men\u2019s Champions League. Just call things honestly."
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "2ff45ba9e9b1e9936940b9368025ba052f3b96424593387dcfbc49b7b5b59cb3"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-13T19:52:50.844612+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-13T19:52:52.543147+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-13T19:52:52.543286+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
