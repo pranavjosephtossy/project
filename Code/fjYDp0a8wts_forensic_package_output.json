@@ -1,0 +1,38 @@
+[
+    {
+        "raw_content": {
+            "comment_id": "UgygxTPrT7tjk5Jz0AB4AaABAg",
+            "comment_author": "@realtruenorth",
+            "comment_text": "Get the drill sergeant from full metal jacket. Please.",
+            "comment_published_at": "2023-06-05T14:43:09Z",
+            "comment_hash_sha256": "a6bd35316d47f4424138cd2c95353986928950673024d063265157b4ae29aa53"
+        },
+        "analysis_output": {
+            "comment_id": "UgygxTPrT7tjk5Jz0AB4AaABAg",
+            "llm_severity": "none",
+            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it simply requests a character from a movie.",
+            "content": "Get the drill sergeant from full metal jacket. Please."
+        },
+        "hashes": {
+            "initial_raw_json_hash": "",
+            "content_hash": "a6bd35316d47f4424138cd2c95353986928950673024d063265157b4ae29aa53"
+        },
+        "chain_of_custody": [
+            {
+                "timestamp": "2026-05-14T08:49:25.896620+00:00",
+                "action": "collected",
+                "performed_by": "collection_module"
+            },
+            {
+                "timestamp": "2026-05-14T08:49:28.627371+00:00",
+                "action": "analysis",
+                "performed_by": "analysis_module"
+            },
+            {
+                "timestamp": "2026-05-14T08:49:28.627540+00:00",
+                "action": "stored",
+                "performed_by": "forensic_storage_module"
+            }
+        ]
+    }
+]

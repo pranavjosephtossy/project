@@ -91,7 +91,7 @@ analysis(raw_json)
 ├── add_chain_of_custody_entry()
 │   ├── action="analysis"
 │   └──performed_by="analysis_module"
-└── return nalysis_output
+└── return analysis_output
 ```
 ```bash
 Methodology
