@@ -10,7 +10,7 @@
         "analysis_output": {
             "comment_id": "UgygxTPrT7tjk5Jz0AB4AaABAg",
             "llm_severity": "none",
-            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it simply requests a character from a movie.",
+            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it simply expresses a desire for a character from a film.",
             "content": "Get the drill sergeant from full metal jacket. Please."
         },
         "hashes": {
@@ -19,17 +19,17 @@
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-14T08:49:25.896620+00:00",
+                "timestamp": "2026-05-14T10:31:57.684147+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-14T08:49:28.627371+00:00",
+                "timestamp": "2026-05-14T10:31:58.891248+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-14T08:49:28.627540+00:00",
+                "timestamp": "2026-05-14T10:31:58.891301+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }

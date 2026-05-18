@@ -10,7 +10,7 @@
         "analysis_output": {
             "comment_id": "Ugx9cRgFaMyYzSJI5KV4AaABAg",
             "llm_severity": "none",
-            "llm_reasoning": "The comment is a neutral inquiry about a video and does not contain any hate speech or abusive language.",
+            "llm_reasoning": "The comment is a neutral inquiry about the existence of another video and does not contain any hate speech or abusive language.",
             "content": "Wait wasn\u2019t there another video of them playing this game?"
         },
         "hashes": {
@@ -19,17 +19,17 @@
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:08.219731+00:00",
+                "timestamp": "2026-05-14T10:22:14.315877+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:09.272832+00:00",
+                "timestamp": "2026-05-14T10:22:15.928503+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:09.273040+00:00",
+                "timestamp": "2026-05-14T10:22:15.928625+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
@@ -46,7 +46,7 @@
         "analysis_output": {
             "comment_id": "UgycSoG7blz4tLmIbWx4AaABAg",
             "llm_severity": "none",
-            "llm_reasoning": "The comment expresses a personal reaction (sadness) to the appearance of someone named Yash but does not contain any hate speech or abusive language.",
+            "llm_reasoning": "The comment expresses a personal reaction (sadness) to someone's appearance without any hateful or abusive language.",
             "content": "not yash appearing again\ud83d\ude2d\ud83d\ude2d"
         },
         "hashes": {
@@ -55,17 +55,17 @@
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:09.273067+00:00",
+                "timestamp": "2026-05-14T10:22:15.928642+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:10.625476+00:00",
+                "timestamp": "2026-05-14T10:22:17.328118+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:10.625602+00:00",
+                "timestamp": "2026-05-14T10:22:17.328328+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
@@ -91,17 +91,17 @@
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:10.625620+00:00",
+                "timestamp": "2026-05-14T10:22:17.328349+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:11.701216+00:00",
+                "timestamp": "2026-05-14T10:22:19.226007+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:11.701369+00:00",
+                "timestamp": "2026-05-14T10:22:19.226063+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
@@ -118,7 +118,7 @@
         "analysis_output": {
             "comment_id": "UgzuJnorKeb9eK-nz6F4AaABAg",
             "llm_severity": "none",
-            "llm_reasoning": "The comment is a simple request for someone named Martin to play a video game and does not contain any hate speech or abusive language.",
+            "llm_reasoning": "The comment is a simple request for someone named Martin to play a game and does not contain any hate speech or abusive language.",
             "content": "plz martin play stardew valley"
         },
         "hashes": {
@@ -127,17 +127,17 @@
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:11.701382+00:00",
+                "timestamp": "2026-05-14T10:22:19.226070+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:13.088188+00:00",
+                "timestamp": "2026-05-14T10:22:20.860363+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:13.088364+00:00",
+                "timestamp": "2026-05-14T10:22:20.860481+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
@@ -154,7 +154,7 @@
         "analysis_output": {
             "comment_id": "Ugwfa36y6IjO-Y_PGlB4AaABAg",
             "llm_severity": "none",
-            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it simply mentions a timestamp and a title without any negative connotations.",
+            "llm_reasoning": "The comment does not contain any hate speech or abusive language; it simply mentions a timestamp and a reference to 'DUNE'.",
             "content": "1:53 DUNE MENTIONED"
         },
         "hashes": {
@@ -163,17 +163,17 @@
         },
         "chain_of_custody": [
             {
-                "timestamp": "2026-05-10T09:50:13.088377+00:00",
+                "timestamp": "2026-05-14T10:22:20.860494+00:00",
                 "action": "collected",
                 "performed_by": "collection_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:14.842034+00:00",
+                "timestamp": "2026-05-14T10:22:22.116682+00:00",
                 "action": "analysis",
                 "performed_by": "analysis_module"
             },
             {
-                "timestamp": "2026-05-10T09:50:14.842112+00:00",
+                "timestamp": "2026-05-14T10:22:22.116914+00:00",
                 "action": "stored",
                 "performed_by": "forensic_storage_module"
             }
